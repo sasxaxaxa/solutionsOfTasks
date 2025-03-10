@@ -1,6 +1,15 @@
 package leetcode.hard;
 
 class Solution {
+    public static void main(String[] args) {
+        int[] arr1 = new int[]{10};
+        int[] arr2 = new int[]{20, 30, 40, 50, 60, 70};
+
+        Solution solution = new Solution();
+        System.out.println(solution.findMedianSortedArrays(arr1, arr2));
+    }
+
+
     public double findMedianSortedArrays(int[] nums1, int[] nums2) {
         // инициализация переменных m и n с длинами массивов nums1 и nums2 соответственно
         int m = nums1.length;
@@ -17,6 +26,9 @@ class Solution {
         // инициализация переменных для бинарного поиска медианы
         int imin = 0;
         int imax = m;
+
+
+
         int half_len = (m + n + 1) / 2;
         // бинарный поиск медианы
         while (imin <= imax) {
